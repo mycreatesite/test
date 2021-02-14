@@ -1,0 +1,172 @@
+.container {
+    width : 80vw;
+    max-width : 1100px;
+    margin : 0 auto;
+  }
+  h1 {
+    font-size : 7rem;
+    font-weight : 900;
+    letter-spacing: 12px;
+    padding-top: 7vh;
+    margin: 0 0 -5vh;
+  }
+  h2 {
+    font-size : 3rem;
+    font-weight : 900;
+    letter-spacing: 9px;
+    margin : 0;
+  }
+  h3 {
+    font-size: .8rem;
+    letter-spacing: 2px;
+    color : #4BC9C7;
+    margin : 1rem 0 0 0;
+  }
+  p {
+    color : #808080;
+    font-size : .85rem;
+    margin : 2rem 0;
+    line-height : 2;
+  }
+  ul {
+    font-size : .85rem;
+    font-weight : 700;
+    letter-spacing : 3px;
+    line-height : 2;
+  }
+  .examples {
+    list-style-type: none;
+    padding-left : 1.5rem;
+    margin: 2rem 0;
+  }
+  .examples li {
+    margin : .5rem 0;
+    cursor: pointer;
+    position: relative;
+  }
+  .examples li::before {
+    content: '＋';
+    position: absolute;
+    top : 3px;
+    left: -1rem;
+    display : inline-block;
+    color : #4BC9C7;
+    font-size : .7rem;
+    font-weight : 400;
+    letter-spacing : 0;
+    transition : .2s;
+    transform-origin: 50% 45%;
+  }
+  .examples li:hover::before {
+    transform : rotate(135deg);
+  }
+  .examples span {
+    position : relative;
+  }
+  .examples a {
+    position : relative;
+    display : inline-block;
+    text-decoration: none;
+    color : #000;
+  }
+  .examples a span {
+    transition : .2s;
+  }
+  .examples li:hover a span {
+    color : #f7f7f7;
+  }
+  section:nth-of-type(even) .examples li:hover a span {
+    color : #000;
+  }
+  .examples a::before {
+    content: '';
+    position : absolute;
+    display : block;
+    left : 0;
+    bottom : 0;
+    width : 100%;
+    height : 0;
+    opacity : 0;
+    background : #000;
+    transition : .2s;
+  }
+  section:nth-of-type(even) a::before {
+    background : #f7f7f7;
+  }
+  .examples li:hover a::before {
+    height : 100%;
+    opacity : 1;
+  }
+  .keywords {
+    padding : 0;
+    color : #888;
+  }
+  .keywords li {
+    display: inline-block;
+  }
+  .keywords li::after {
+    content : '|';
+    color : #dddddd;
+    margin-right : .5rem;
+  }
+  section:nth-of-type(even) .keywords li::after {
+    color : #555;
+  }
+  .keywords li:last-child::after {
+    content : '';
+    margin-right : 0;
+  }
+  section {
+    padding : 100px 50px;
+    margin-bottom : 50px;
+  }
+  section:nth-of-type(odd) {
+    background : #f7f7f7;
+  }
+  section:nth-of-type(even) {
+    background : #000;
+  }
+  section:nth-of-type(even) * {
+    color : #f7f7f7;
+  }
+  section:nth-of-type(even) .keywords li {
+    color : #a0a0a0;
+  }
+  footer p {
+    font-size : .7rem;
+    letter-spacing: 1px;
+  }
+  @media screen and (max-width:900px) {
+    .container {
+      width : 90vw;
+    }
+    h1 {
+      font-size : 14vw;
+      letter-spacing: 9px;
+    }
+    ul {
+      letter-spacing : 0.4vw;
+    }
+    section {
+      padding: 7.5vh 20px;
+    }
+  }
+  @media screen and (max-width:420px) {
+    h1 {
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-size: 9vw;
+      letter-spacing: 2px;
+    }
+    h3 {
+      font-size: 3vw;
+      letter-spacing: 1px;
+    }
+    .examples {
+      padding-left: 1rem;
+    }
+    .examples li {
+      margin: .8rem 0;
+    }
+  }
