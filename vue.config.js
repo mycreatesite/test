@@ -1,4 +1,4 @@
 module.exports = {
-    publicPath: '/test',
+    publicPath: '/vue-spa-test',
     outputDir: 'docs',
 }
